@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h> // I tried adding this library, removed warning of system cls but not working as intended after 'y' on VSc
 #include <ctype.h>
 
 /* 
@@ -14,7 +15,7 @@ int main() {
     //initialize
     char tryAgain;
     //assign correct answers here
-    char answers[] = {'a', 'b', 'a', 'c', 'b', 'a', 'a', 'd', 'c', 'c'};
+    char answers[10] = {'a', 'b', 'a', 'c', 'b', 'a', 'a', 'd', 'c', 'c'}; // declared '10' inside [], works.
     char userAnswers[10]; // for storing user's answers
     int correct, incorrect; // for storing the number of correct and incorrect 
     int space, index_questions, index_choices, index_answers;// for loops variables
@@ -23,7 +24,7 @@ int main() {
     printf("\n10 Questions related to C language C language quiz\n\n");
     
     //type your questions here
-    char *questions[] = {
+    char questions[10] [100] = { // added '10' inside [], removed '*', added [10] [100]
         "1. What does 'printf' function do in C?",
         "2. Which data type is used to store a single character in C?",
         "3. What is the result of 5 + 7 in C?",
@@ -37,7 +38,7 @@ int main() {
     };
     
     //type your choices here
-    char *choices[] = {
+    char choices[40] [100] = { // added 40 inside [], removed '*', added [40] and [100]
         "a. It prints text to the console.",
         "b. It performs mathematical calculations.",
         "c. It reads input from the keyboard.",
@@ -86,6 +87,12 @@ int main() {
         //displays directions
         printf("\n\n");
         printf("Directions: choose (a, b, c, d)\n\n\n");
+        
+        //space
+	        for (space = 1; space <= 70; space++){
+		        printf("-");	
+	        }
+	        printf("\n");
         
         //displays questions from 1 to 10
         for (index_questions = 0; index_questions < 10; index_questions++) {
