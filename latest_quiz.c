@@ -24,7 +24,7 @@ int main() {
     printf("\n10 Questions related to C language C language quiz\n\n");
     
     //type your questions here
-    char questions[10] [100] = { // added '10' inside [], removed '*', added [10] [100]
+    char questions[10] [100] = { // first bracket is for number of elements // second bracket is for string
         "1. What does 'printf' function do in C?",
         "2. Which data type is used to store a single character in C?",
         "3. What is the result of 5 + 7 in C?",
@@ -38,7 +38,7 @@ int main() {
     };
     
     //type your choices here
-    char choices[40] [100] = { // added 40 inside [], removed '*', added [40] and [100]
+    char choices[40] [100] = { // first bracket is for number of elements // second bracket is for string
         "a. It prints text to the console.",
         "b. It performs mathematical calculations.",
         "c. It reads input from the keyboard.",
